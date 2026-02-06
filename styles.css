@@ -1,4 +1,4 @@
-*{
+{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -95,7 +95,7 @@ margin-bottom:20px;
 .contacto-item a{
 display:inline-flex;
 align-items:center;
-gap:12px;
+gap:10px;
 background:var(--accent-color);
 color:#fff;
 padding:15px 30px;
@@ -110,12 +110,11 @@ background:#0056b3;
 transform:scale(1.05);
 }
 
-/* ICONOS REDES (NUEVO — SIN ROMPER DISEÑO) */
+/* ICONOS — ÚNICO CAMBIO */
 .icon{
 width:20px;
 height:20px;
-min-width:20px;
-object-fit:contain;
+vertical-align:middle;
 }
 
 /* FOOTER */
