@@ -1,263 +1,222 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Innotec Seguridad - Seguridad Electrónica y Domótica</title>
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Innotec Seguridad - Seguridad Electrónica y Domótica</title>
 
-        /* Variables de colores */
-        :root {
-            --primary-color: #000000; /* Negro */
-            --secondary-color: #666666; /* Gris */
-            --accent-color: #007bff; /* Azul */
-            --background-color: #f8f9fa; /* Gris claro para fondo */
-            --text-color: #333333;
-        }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
+:root{
+--primary-color:#000;
+--secondary-color:#666;
+--accent-color:#007bff;
+--background-color:#f8f9fa;
+--text-color:#333;
+}
 
-        /* Header */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
+body{
+font-family:Arial,sans-serif;
+line-height:1.6;
+color:var(--text-color);
+background:var(--background-color);
+}
 
-        header .logo {
-            max-width: 200px; /* Agrandamos el logo */
-            height: auto;
-            margin-bottom: 10px;
-        }
+/* HEADER */
+header{
+background:var(--primary-color);
+color:#fff;
+padding:30px 20px;
+text-align:center;
+}
 
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
+.logo{max-width:200px;margin-bottom:10px}
 
-        header p {
-            font-size: 1.2em;
-            color: var(--secondary-color);
-        }
+header h1{
+font-size:2.5em;
+margin-bottom:10px;
+text-transform:uppercase;
+}
 
-        /* Sección de servicios */
-        #servicios {
-            padding: 50px 20px;
-            background-color: white;
-            text-align: center;
-        }
+header p{color:var(--secondary-color)}
 
-        #servicios h2 {
-            font-size: 2em;
-            margin-bottom: 30px;
-            color: var(--primary-color);
-        }
+/* SERVICIOS */
+main section{padding:50px 20px}
 
-        #servicios p {
-            margin-bottom: 40px;
-        }
+#servicios{background:#fff;text-align:center}
 
-        .servicios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.servicios-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
 
-        .servicio-card {
-            background-color: var(--background-color);
-            border: 1px solid var(--secondary-color);
-            border-radius: 12px;
-            padding: 25px 20px;
-            text-decoration: none;
-            color: var(--primary-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
+.servicio-card{
+background:var(--background-color);
+border:1px solid var(--secondary-color);
+border-radius:12px;
+padding:25px 20px;
+text-decoration:none;
+color:var(--primary-color);
+display:flex;
+flex-direction:column;
+align-items:center;
+transition:.3s;
+}
 
-        /* Animación atractiva al pasar el cursor */
-        .servicio-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            color: var(--accent-color);
-        }
+.servicio-card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+color:var(--accent-color);
+}
 
-        .servicio-card .icono {
-            font-size: 3.5em;
-            margin-bottom: 15px;
-        }
+.icono{font-size:3.5em;margin-bottom:15px}
 
-        .servicio-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            text-align: center;
-        }
+/* CONTACTO */
+#contacto{
+background:var(--primary-color);
+color:#fff;
+text-align:center;
+}
 
-        .servicio-card p {
-            color: var(--secondary-color);
-            text-align: center;
-        }
+.contacto-item{margin-bottom:20px}
 
-        /* Sección de contacto */
-        #contacto {
-            padding: 50px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-        }
+.contacto-item a{
+display:inline-flex;
+align-items:center;
+gap:10px;
+background:var(--accent-color);
+color:#fff;
+padding:15px 30px;
+text-decoration:none;
+border-radius:5px;
+font-size:1.2em;
+transition:.3s;
+}
 
-        #contacto h2 {
-            font-size: 2em;
-            margin-bottom: 30px;
-        }
+.contacto-item a:hover{
+background:#0056b3;
+transform:scale(1.05);
+}
 
-        .contacto-item {
-            margin-bottom: 20px;
-        }
+.icon{width:24px;height:24px}
 
-        .contacto-item a {
-            display: inline-flex;
-            align-items: center;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            gap: 10px;
-        }
+/* FOOTER */
+footer{
+background:var(--secondary-color);
+color:#fff;
+text-align:center;
+padding:20px;
+}
 
-        .contacto-item a:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-
-        .email {
-            font-size: 1.2em;
-            color: var(--secondary-color);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            justify-content: center;
-            background-color: transparent;
-            cursor: default;
-            user-select: text;
-        }
-
-        .icon {
-            width: 24px;
-            height: 24px;
-        }
-
-        footer {
-            background-color: var(--secondary-color);
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2em; }
-            .servicios-grid { grid-template-columns: 1fr; }
-            .contacto-item a { padding: 12px 20px; font-size: 1em; }
-        }
-    </style>
+@media(max-width:768px){
+header h1{font-size:2em}
+.servicios-grid{grid-template-columns:1fr}
+.contacto-item a{font-size:1em;padding:12px 20px}
+}
+</style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <img src="logo.png" alt="INNOTEC SEGURIDAD" class="logo" />
-        <h1>INNOTEC SEGURIDAD</h1>
-        <p>
-            Soluciones profesionales en seguridad electrónica y domótica para empresas, comercios y hogares.
-            Tecnología confiable, instalación certificada y soporte permanente.
-        </p>
-    </header>
 
-    <!-- Sección de Servicios -->
-    <section id="servicios">
-        <h2>Soluciones Integrales</h2>
-        <p>Diseñamos, instalamos y mantenemos sistemas de seguridad adaptados a cada necesidad.</p>
-        <div class="servicios-grid">
-            <a href="https://wa.me/5492235026866?text=Hola,%20quiero%20información%20sobre%20instalación%20de%20Cámaras%20de%20Seguridad" class="servicio-card" target="_blank">
-                <div class="icono">📹</div>
-                <h3>Cámaras de Seguridad</h3>
-                <p>Sistemas de videovigilancia avanzados para proteger tu hogar o negocio.</p>
-            </a>
-            <a href="https://wa.me/5492235026866?text=Hola,%20quiero%20información%20sobre%20Control%20de%20Asistencia" class="servicio-card" target="_blank">
-                <div class="icono">⏰</div>
-                <h3>Control de Asistencia</h3>
-                <p>Monitoreo y registro de entradas y salidas para mayor eficiencia.</p>
-            </a>
-            <a href="https://wa.me/5492233047356?text=Hola,%20quiero%20información%20sobre%20Videoporteros" class="servicio-card" target="_blank">
-                <div class="icono">📞</div>
-                <h3>Videoporteros</h3>
-                <p>Comunicación visual y segura desde la puerta de entrada.</p>
-            </a>
-            <a href="https://wa.me/5492233047356?text=Hola,%20quiero%20información%20sobre%20Control%20de%20Acceso" class="servicio-card" target="_blank">
-                <div class="icono">🔐</div>
-                <h3>Control de Acceso</h3>
-                <p>Sistemas inteligentes para gestionar accesos autorizados.</p>
-            </a>
-            <a href="https://wa.me/5492235026866?text=Hola,%20quiero%20información%20sobre%20Cerraduras%20Inteligentes" class="servicio-card" target="_blank">
-                <div class="icono">🗝️</div>
-                <h3>Cerraduras Inteligentes</h3>
-                <p>Cerraduras modernas con control remoto y biometría.</p>
-            </a>
-        </div>
-    </section>
+<header>
+<img src="logo.png" alt="Logo Innotec Seguridad" class="logo">
 
-    <!-- Sección de Contacto -->
-    <section id="contacto">
-        <h2>Contáctanos</h2>
-        <div class="contacto-item">
-            <a href="https://wa.me/5492235026866" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon" />
-                +54 9 223 502 6866
-            </a>
-        </div>
-        <div class="contacto-item">
-            <a href="https://wa.me/5492233047356" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon" />
-                +54 9 223 304 7356
-            </a>
-        </div>
-        <div class="contacto-item email">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                <path d="M4 4h16v16H4z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            soporteinnotecmdp@gmail.com
-        </div>
-        <div class="contacto-item">
-            <a href="https://instagram.com/innotec_mdp" target="_blank" style="background: #E1306C;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icon" />
-                @innotec_mdp
-            </a>
-        </div>
-    </section>
+<h1>Innotec Seguridad</h1>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Innotec Seguridad. Todos los derechos reservados.</p>
-    </footer>
+<p>
+Soluciones profesionales en seguridad electrónica y domótica para empresas, comercios y hogares.
+Tecnología confiable, instalación certificada y soporte permanente.
+</p>
+</header>
+
+<main>
+
+<section id="servicios" aria-labelledby="titulo-servicios">
+<h2 id="titulo-servicios">Soluciones Integrales</h2>
+<p>Diseñamos, instalamos y mantenemos sistemas de seguridad adaptados a cada necesidad.</p>
+
+<div class="servicios-grid">
+
+<a class="servicio-card" target="_blank"
+href="https://wa.me/5492235026866?text=Hola,%20quiero%20info%20sobre%20Cámaras%20de%20Seguridad">
+<span class="icono">📹</span>
+<h3>Cámaras de Seguridad</h3>
+<p>Videovigilancia avanzada para tu hogar o negocio.</p>
+</a>
+
+<a class="servicio-card" target="_blank"
+href="https://wa.me/5492235026866?text=Hola,%20quiero%20info%20sobre%20Control%20de%20Asistencia">
+<span class="icono">⏰</span>
+<h3>Control de Asistencia</h3>
+<p>Registro de entradas y salidas.</p>
+</a>
+
+<a class="servicio-card" target="_blank"
+href="https://wa.me/5492233047356?text=Hola,%20quiero%20info%20sobre%20Videoporteros">
+<span class="icono">📞</span>
+<h3>Videoporteros</h3>
+<p>Comunicación segura desde accesos.</p>
+</a>
+
+<a class="servicio-card" target="_blank"
+href="https://wa.me/5492233047356?text=Hola,%20quiero%20info%20sobre%20Control%20de%20Acceso">
+<span class="icono">🔐</span>
+<h3>Control de Acceso</h3>
+<p>Gestión inteligente de ingresos.</p>
+</a>
+
+<a class="servicio-card" target="_blank"
+href="https://wa.me/5492235026866?text=Hola,%20quiero%20info%20sobre%20Cerraduras%20Inteligentes">
+<span class="icono">🗝️</span>
+<h3>Cerraduras Inteligentes</h3>
+<p>Control remoto y biometría.</p>
+</a>
+
+</div>
+</section>
+
+<section id="contacto" aria-labelledby="titulo-contacto">
+<h2 id="titulo-contacto">Contáctanos</h2>
+
+<div class="contacto-item">
+<a href="https://wa.me/5492235026866" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="icon" alt="">
++54 9 223 502 6866
+</a>
+</div>
+
+<div class="contacto-item">
+<a href="https://wa.me/5492233047356" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="icon" alt="">
++54 9 223 304 7356
+</a>
+</div>
+
+<!-- EMAIL AHORA COMO BOTÓN -->
+<div class="contacto-item">
+<a href="mailto:soporteinnotecmdp@gmail.com">
+📧 soporteinnotecmdp@gmail.com
+</a>
+</div>
+
+<div class="contacto-item">
+<a href="https://instagram.com/innotec_mdp" target="_blank" style="background:#E1306C">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="icon" alt="">
+@innotec_mdp
+</a>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2025 Innotec Seguridad — Todos los derechos reservados</p>
+</footer>
+
 </body>
 </html>
