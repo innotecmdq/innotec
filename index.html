@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Innotec Seguridad - Seguridad Electrónica y Domótica</title>
 
 <style>
@@ -23,7 +23,6 @@ color:var(--text-color);
 background:var(--background-color);
 }
 
-/* HEADER */
 header{
 background:var(--primary-color);
 color:#fff;
@@ -33,15 +32,6 @@ text-align:center;
 
 .logo{max-width:200px;margin-bottom:10px}
 
-header h1{
-font-size:2.5em;
-margin-bottom:10px;
-text-transform:uppercase;
-}
-
-header p{color:var(--secondary-color)}
-
-/* SERVICIOS */
 main section{padding:50px 20px}
 
 #servicios{background:#fff;text-align:center}
@@ -54,7 +44,7 @@ max-width:1200px;
 margin:auto;
 }
 
-.servicio-card{
+article.servicio-card{
 background:var(--background-color);
 border:1px solid var(--secondary-color);
 border-radius:12px;
@@ -67,7 +57,7 @@ align-items:center;
 transition:.3s;
 }
 
-.servicio-card:hover{
+article.servicio-card:hover{
 transform:translateY(-10px) scale(1.05);
 box-shadow:0 10px 20px rgba(0,0,0,.3);
 color:var(--accent-color);
@@ -75,7 +65,6 @@ color:var(--accent-color);
 
 .icono{font-size:3.5em;margin-bottom:15px}
 
-/* CONTACTO */
 #contacto{
 background:var(--primary-color);
 color:#fff;
@@ -97,14 +86,6 @@ font-size:1.2em;
 transition:.3s;
 }
 
-.contacto-item a:hover{
-background:#0056b3;
-transform:scale(1.05);
-}
-
-.icon{width:24px;height:24px}
-
-/* FOOTER */
 footer{
 background:var(--secondary-color);
 color:#fff;
@@ -113,9 +94,7 @@ padding:20px;
 }
 
 @media(max-width:768px){
-header h1{font-size:2em}
 .servicios-grid{grid-template-columns:1fr}
-.contacto-item a{font-size:1em;padding:12px 20px}
 }
 </style>
 </head>
@@ -124,92 +103,82 @@ header h1{font-size:2em}
 
 <header>
 <img src="logo.png" alt="Logo Innotec Seguridad" class="logo">
-
 <h1>Innotec Seguridad</h1>
-
-<p>
-Soluciones profesionales en seguridad electrónica y domótica para empresas, comercios y hogares.
-Tecnología confiable, instalación certificada y soporte permanente.
-</p>
+<p>Soluciones profesionales en seguridad electrónica y domótica para empresas, comercios y hogares.</p>
 </header>
 
 <main>
 
-<section id="servicios" aria-labelledby="titulo-servicios">
-<h2 id="titulo-servicios">Soluciones Integrales</h2>
-<p>Diseñamos, instalamos y mantenemos sistemas de seguridad adaptados a cada necesidad.</p>
+<section id="servicios">
+<h2>Soluciones Integrales</h2>
 
 <div class="servicios-grid">
 
-<a class="servicio-card" target="_blank"
-href="https://wa.me/5492235026866?text=Hola,%20quiero%20info%20sobre%20Cámaras%20de%20Seguridad">
+<article class="servicio-card">
+<a target="_blank" href="https://wa.me/5492235026866?text=Hola,%20quiero%20info%20sobre%20Cámaras%20de%20Seguridad">
 <span class="icono">📹</span>
 <h3>Cámaras de Seguridad</h3>
 <p>Videovigilancia avanzada para tu hogar o negocio.</p>
 </a>
+</article>
 
-<a class="servicio-card" target="_blank"
-href="https://wa.me/5492235026866?text=Hola,%20quiero%20info%20sobre%20Control%20de%20Asistencia">
+<article class="servicio-card">
+<a target="_blank" href="https://wa.me/5492235026866?text=Hola,%20quiero%20info%20sobre%20Control%20de%20Asistencia">
 <span class="icono">⏰</span>
 <h3>Control de Asistencia</h3>
 <p>Registro de entradas y salidas.</p>
 </a>
+</article>
 
-<a class="servicio-card" target="_blank"
-href="https://wa.me/5492233047356?text=Hola,%20quiero%20info%20sobre%20Videoporteros">
+<article class="servicio-card">
+<a target="_blank" href="https://wa.me/5492233047356?text=Hola,%20quiero%20info%20sobre%20Videoporteros">
 <span class="icono">📞</span>
 <h3>Videoporteros</h3>
 <p>Comunicación segura desde accesos.</p>
 </a>
+</article>
 
-<a class="servicio-card" target="_blank"
-href="https://wa.me/5492233047356?text=Hola,%20quiero%20info%20sobre%20Control%20de%20Acceso">
+<article class="servicio-card">
+<a target="_blank" href="https://wa.me/5492233047356?text=Hola,%20quiero%20info%20sobre%20Control%20de%20Acceso">
 <span class="icono">🔐</span>
 <h3>Control de Acceso</h3>
 <p>Gestión inteligente de ingresos.</p>
 </a>
+</article>
 
-<a class="servicio-card" target="_blank"
-href="https://wa.me/5492235026866?text=Hola,%20quiero%20info%20sobre%20Cerraduras%20Inteligentes">
+<article class="servicio-card">
+<a target="_blank" href="https://wa.me/5492235026866?text=Hola,%20quiero%20info%20sobre%20Cerraduras%20Inteligentes">
 <span class="icono">🗝️</span>
 <h3>Cerraduras Inteligentes</h3>
 <p>Control remoto y biometría.</p>
 </a>
+</article>
 
 </div>
 </section>
 
-<section id="contacto" aria-labelledby="titulo-contacto">
-<h2 id="titulo-contacto">Contáctanos</h2>
+<section id="contacto">
+<h2>Contáctanos</h2>
+
+<nav aria-label="Canales de contacto">
 
 <div class="contacto-item">
-<a href="https://wa.me/5492235026866" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="icon" alt="">
-+54 9 223 502 6866
-</a>
+<a href="https://wa.me/5492235026866" target="_blank">📱 +54 9 223 502 6866</a>
 </div>
 
 <div class="contacto-item">
-<a href="https://wa.me/5492233047356" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="icon" alt="">
-+54 9 223 304 7356
-</a>
-</div>
-
-<!-- EMAIL AHORA COMO BOTÓN -->
-<div class="contacto-item">
-<a href="mailto:soporteinnotecmdp@gmail.com">
-📧 soporteinnotecmdp@gmail.com
-</a>
+<a href="https://wa.me/5492233047356" target="_blank">📱 +54 9 223 304 7356</a>
 </div>
 
 <div class="contacto-item">
-<a href="https://instagram.com/innotec_mdp" target="_blank" style="background:#E1306C">
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="icon" alt="">
-@innotec_mdp
-</a>
+<a href="mailto:soporteinnotecmdp@gmail.com">📧 soporteinnotecmdp@gmail.com</a>
 </div>
 
+<div class="contacto-item">
+<a href="https://instagram.com/innotec_mdp" target="_blank">📷 @innotec_mdp</a>
+</div>
+
+</nav>
 </section>
 
 </main>
